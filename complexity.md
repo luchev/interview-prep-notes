@@ -8,20 +8,20 @@ Complexity is measured in terms of the input size (usually for the input size we
 
 When calculating complexity we
 
-- discard multiplication of constants: $$n^2$$ and $$ 1000 \times n^2 $$ are treated identically
-- discard insignificant addends: $$n^2 + n + 1042$$ and $$n^2$$ are treated identically
+* discard multiplication of constants: $$n^2$$ and $$1000 \times n^2$$ are treated identically
+* discard insignificant addends: $$n^2 + n + 1042$$ and $$n^2$$ are treated identically
 
 #### Examples
 
-- $$\mathcal{O}(34n^4+5) = \mathcal{O}(n^4)$$
-- $$\mathcal{O}(2^n+n^{1024}+log(n)) = \mathcal{O}(2^n)$$
-- $$\mathcal{O}(5N + \frac{1}{2} M) = \mathcal{O}(N + M)$$
+* $$\mathcal{O}(34n^4+5) = \mathcal{O}(n^4)$$
+* $$\mathcal{O}(2^n+n^{1024}+log(n)) = \mathcal{O}(2^n)$$
+* $$\mathcal{O}(5N + \frac{1}{2} M) = \mathcal{O}(N + M)$$
 
 ### Time complexity
 
 Time Complexity evaluates how many steps an algorithm takes to complete. The number of steps can be translated to CPU cycles or time (seconds/minutes). This conversion depends on the CPU used so it's not very reliable.
 
-For simplicity 1 step is usually assumed to be 1 CPU cycle although different operations take different number of cycles (e.g. Division takes 80ish cycles, while Comparison takes 1 cycle [Check page 10](https://www.agner.org/optimize/instruction_tables.pdf))
+For simplicity 1 step is usually assumed to be 1 CPU cycle although different operations take different numbers of cycles (e.g. Division takes 80ish cycles, while Comparison takes 1 cycle [Check page 10](https://www.agner.org/optimize/instruction\_tables.pdf))
 
 #### Examples
 
@@ -45,7 +45,7 @@ def foo(arr):
 
 ### Memory complexity
 
-Memory complexity evaluates how much memory an algorithm requires. This is the maximum memory allocated at a single point in time. This memory usually disregards the size of the variables (i.e. 32-bit int is considered the same as a 8-bit char).
+Memory complexity evaluates how much memory an algorithm requires. This is the maximum memory allocated at a single point in time. This memory usually disregards the size of the variables (i.e. 32-bit int is considered the same as an 8-bit char).
 
 #### Examples
 
@@ -76,7 +76,7 @@ $$
 
 ## Big O cheat sheet
 
-https://www.bigocheatsheet.com/
+\[https://www.bigocheatsheet.com/]\(https://www.bigocheatsheet.com/)
 
 ## Constants and Big O
 
@@ -84,7 +84,7 @@ Usually, we discard constants when using Big O, but in some cases, the constant 
 
 ![](https://i.imgur.com/qv7rO70.png)
 
-## Worst, Best and Average case
+## Worst, Best, and Average case
 
 We can analyze algorithms in the Best, Average, and Worst cases:
 
@@ -98,9 +98,17 @@ def search(haystack, needle):
     return False
 ```
 
-- Best case: `search([1,2,3,4,5], 1)` --> $$\mathcal{O}(1)$$​ because we find the `needle` on the first iteration.
-- Worst case: `search([1,2,3,4,5], 5)` --> $$\mathcal{O}(n)$$​ because we find the `needle` on the last iteration. $$n$$​ is the length of the input array.
-- Average case: `search([1,2,3,4,5], x)` --> $$\mathcal{O}(n/2)  = \mathcal{O}(n)$$. We calculate this by taking all possible values of x: 1,2,3,4,5, evaluating the algorithm complexity for each of them and dividing by the number of executions ($$n$$). i.e. $$\mathcal{O}((1 + 2 + ... + n-1 + n)/n) = \mathcal{O}(n/2)$$
+* Best case: `search([1,2,3,4,5], 1)` --> $$\mathcal{O}(1)$$​ because we find the `needle` on the first iteration.
+* Worst case: `search([1,2,3,4,5], 5)` --> $$\mathcal{O}(n)$$​ because we find the `needle` on the last iteration. $$n$$​ is the length of the input array.
+* Average case: `search([1,2,3,4,5], x)` --> $$\mathcal{O}(n/2) = \mathcal{O}(n)$$. We calculate this by taking all possible values of x: 1,2,3,4,5, evaluating the algorithm complexity for each of them and dividing by the number of executions ($$n$$). i.e. $$\mathcal{O}((1 + 2 + ... + n-1 + n)/n) = \mathcal{O}(n/2)$$
+
+## Amortized complexity
+
+Amortized complexity is the total expense per operation, evaluated over a sequence of operations.
+
+The idea is to guarantee the total expense of the entire sequence while permitting individual operations to be much more expensive than the amortized cost.
+
+e.g. Appending to a dynamic array is $$\mathcal{O}(1)$$​ but in reality, it can be $$\mathcal{O}(1)$$​ or $$\mathcal{O}(n)$$.​ Every time the array is resized the cost is $$\mathcal{O}(n)$$​, but this happens only when adding every $$2^k$$element so it happens for the 1st, 2nd, 4th, 8th, 16th, etc. elements. In all other cases, the array has a buffer​ at the end so the append costs $$\mathcal{O}(1)$$​. If you take the average of many $$\mathcal{O}(1)$$s and the occasional $$\mathcal{O}(n)$$​ you'll get amortized $$\mathcal{O}(1)$$​.
 
 ## Definitions of all notations
 
