@@ -1,4 +1,15 @@
 # Table of contents
 
-* [Complexity](README.md)
+* [Interview prep notes](README.md)
+* [Complexity](complexity.md)
 * [Sorting](sorting.md)
+* [Searching](searching.md)
+* [Sequential data structures](sequential-data-structures/README.md)
+  * [Linked List](sequential-data-structures/linked-list.md)
+  * [Dynamic array](sequential-data-structures/dynamic-array.md)
+  * [Stack](sequential-data-structures/stack.md)
+  * [Queue](sequential-data-structures/queue.md)
+* [Hierarchical data structures](hierarchical-data-structures/README.md)
+  * [Trees](hierarchical-data-structures/trees.md)
+* [TODO](todo.md)
+* [Page 2](page-2.md)
