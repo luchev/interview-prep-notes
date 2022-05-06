@@ -1,20 +1,32 @@
+---
+description: Pronounced "Big Oh"
+---
+
 # Complexity
 
-### Complexity (Big O)
+## Complexity (Big O)
 
-Complexity of an algorithm measures time and memory. How long does one algorithm takes to finish? How much memory does it use?
+Algorithm complexity refers to how many resources (time, memory, etc.) an algorithm consumes.
 
-We measure these values in terms of the input size (Usually for the input size we use the letter $$n$$)
+We measure these values in terms of the input size (usually for the input size we use the letter $$n$$)
 
-We can analyze algorithms in the Best, Average, and Worst case.
+We can analyze algorithms in the Best, Average, and Worst cases:
 
-The Best case measures the quickest way for an algorithm to finish.
+e.g. for a naive search function defined as:
 
-The Average case measures what time the algorithm needs to finish on average.
+```python
+def search(haystack, needle):
+    for x in haystack:
+        if x == needle:
+            return True
+    return False
+```
 
-The Worst case measures the slowest time for an algorithm to finish.
+* Best case: `search([1,2,3,4,5], 1)` --> $$O(1)$$​ because we find the `needle` on the first iteration.
+* Worst case: `search([1,2,3,4,5], 5)` --> $$O(n)$$​ because we find the `needle` on the last iteration. $$n$$​ is the length of the input array.
+* Average case: `search([1,2,3,4,5], x)` --> $$O(n/2)  = O(n)$$. We calculate this by taking all possible values of x: 1,2,3,4,5&#x20;
 
-#### General idea
+#### Definitions
 
 1. Big O: $$\mathcal{O}(n^2)$$ - the algorithm takes **at most** $$n^2$$ steps to finish in the **WORST CASE**.
 2. Little o: $$\mathcal{o}(n^2)$$ - the algorithm takes **less than** $$n^2$$ steps to finish in the **WORST CASE**.
