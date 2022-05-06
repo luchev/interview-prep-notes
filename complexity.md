@@ -110,6 +110,19 @@ The idea is to guarantee the total expense of the entire sequence while permitti
 
 e.g. Appending to a dynamic array is $$\mathcal{O}(1)$$​ but in reality, it can be $$\mathcal{O}(1)$$​ or $$\mathcal{O}(n)$$.​ Every time the array is resized the cost is $$\mathcal{O}(n)$$​, but this happens only when adding every $$2^k$$element so it happens for the 1st, 2nd, 4th, 8th, 16th, etc. elements. In all other cases, the array has a buffer​ at the end so the append costs $$\mathcal{O}(1)$$​. If you take the average of many $$\mathcal{O}(1)$$s and the occasional $$\mathcal{O}(n)$$​ you'll get amortized $$\mathcal{O}(1)$$​.
 
+## Names of common complexities
+
+* Constant $$\mathcal{O}(1)$$​
+* Logarithmic $$\mathcal{O}(log(n))$$​
+* Linear $$\mathcal{O}(n)$$​
+* Linearithmic $$\mathcal{O}(n \times log(n))$$​
+* Quadratic $$\mathcal{O}(n^2)$$​
+* Cubic $$\mathcal{O}(n^3)$$
+* Exponential $$\mathcal{O}(2^n)$$​
+* Factorial $$\mathcal{O}(n!)$$​
+
+
+
 ## Definitions of all notations
 
 1. Big O: $$\mathcal{O}(n^2)$$ - the algorithm takes **at most** $$n^2$$ steps to finish in the **WORST CASE**.
@@ -139,3 +152,7 @@ $$
 $$
 \omega(f(n))=\{g(n): \forall c > 0 \space \exists n_0 > 0 \mid 0 \le cf(n) < g(n) \space \forall n \ge n_0 \}
 $$
+
+## Further readings
+
+* Calculating the complexity of a recursive function using the [Master Theorem](https://en.wikipedia.org/wiki/Master\_theorem\_\(analysis\_of\_algorithms\))
