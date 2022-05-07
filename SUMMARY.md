@@ -10,6 +10,7 @@
   - [Quick sort](sorting/quick-sort.md)
   - [Counting sort](sorting/counting-sort.md)
   - [Radix sort](sorting/radix-sort.md)
+  - [Bucket sort](sorting/bucket-sort.md)
 - [Searching](searching.md)
 - [Sequential data structures](sequential-data-structures/README.md)
   - [Linked List](sequential-data-structures/linked-list.md)
