@@ -2,18 +2,18 @@
 
 ### Properties
 
-| Radix sort                     | n = input size                     |
-| ------------------------------ | ---------------------------------- |
-| Time complexity (Worst case)   | $$\mathcal{O}(n^2)$$               |
-| Time complexity (Average case) | $$\mathcal{O}(n+\frac{n^2}{k}+k)$$ |
-| Space complexity               | $$\mathcal{O}(nk)$$                |
-| Adaptive                       | No                                 |
-| Stable                         | Depends on the underlying sort     |
-| Local                          | No                                 |
-| Online                         | No                                 |
-| In-place                       | No                                 |
-| Parallel                       | Yes                                |
-| External                       | No                                 |
+| Radix sort                     | n = input size, k = number of digits |
+| ------------------------------ | ------------------------------------ |
+| Time complexity (Worst case)   | $$\mathcal{O}(n^2)$$                 |
+| Time complexity (Average case) | $$\mathcal{O}(n*k)$$                 |
+| Space complexity               | $$\mathcal{O}(n+k)$$                 |
+| Adaptive                       | No                                   |
+| Stable                         | Depends on the underlying sort       |
+| Local                          | No                                   |
+| Online                         | No                                   |
+| In-place                       | No                                   |
+| Parallel                       | Yes                                  |
+| External                       | No                                   |
 
 **Key points**
 

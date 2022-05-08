@@ -16,34 +16,18 @@
 | Parallel              | No                   |
 | External              | No                   |
 
-**Key points**
+### **Implementation**
 
-1. The best algorithm for sorting small arrays.
-2. Often combined with other algorithms for optimal runtime.
-
-**Clean code**
-
-```
-void insertionSort(int * array, int length) {
-    for (int nextItemToSortIndex = 1; nextItemToSortIndex < length; nextItemToSortIndex++) {
-        for (int potentiallyBiggerItemIndex = nextItemToSortIndex;
-             	potentiallyBiggerItemIndex > 0 &&
-             	array[potentiallyBiggerItemIndex] < array[potentiallyBiggerItemIndex - 1];
-             	potentiallyBiggerItemIndex--) {
-            swap(array[potentiallyBiggerItemIndex], array[potentiallyBiggerItemIndex-1]);
-        }
-    }
-}
+```python
+def insertionSort(arr):
+  for i in range(1, len(arr)):
+    k = i-1
+    while k >=0 and arr[k] > value:
+      arr[k], arr[k+1] = arr[k+1], arr[k]
+      k -= 1
 ```
 
-**Short code**
+### **Key points**
 
-```
-void insertionSort(int * array, int length) {
-    for (int i = 1; i < length; i++) {
-        for (int k = i; k > 0 && array[k] < array[k - 1]; k--) {
-            swap(array[k], array[k-1]);
-        }
-    }
-}
-```
+1. The best algorithm for sorting small arrays
+2. Often combined with other algorithms for optimal runtime
