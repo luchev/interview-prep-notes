@@ -15,24 +15,45 @@
 | Parallel                     | Yes                            |
 | External                     | Yes                            |
 
-### **Implementation**
+**Key points**
 
-```python
-def countingSort(arr):
-    counts = [0] * (max(arr) + 1)
-    for x in arr:
-        counts[x] += 1
-        
-    resultIndex = 0
-    for x in range(len(counts)):
-        while counts[x] > 0:
-            counts[x] -= 1
-            arr[resultIndex] = x
-            resultIndex += 1
+1. Not a comparison sort.
+2. Very efficient for an array of integers with many repeating integers with small difference between the biggest and smallest integer.
+
+**Uses apart from sorting**
+
+1. Counting inversions
+
+**Counting sort for positive numbers**
+
 ```
+void countingSort(int * array, int length) {
+    int maxNumber = 0;
+    for (int i = 0; i < length; i++) {
+        if (array[i] > maxNumber) {
+            maxNumber = array[i];
+        }
+    }
 
-### **Key points**
+    int * countingArray = new int[maxNumber + 1];
+    for (int i = 0; i < maxNumber + 1; i++) {
+        countingArray[i] = 0;
+    }
 
-1. Not a comparison sort
-2. Very efficient for an array of integers with many repeating integers with a small difference between the biggest and smallest integer
-3. Can be applied to an array with negative numbers by finding the smallest number, adding that number to the whole array (the smallest number becomes 0), and after the sort - subtracting the same number from the whole array
+    for (int i = 0; i < length; i++) {
+        countingArray[array[i]]++;
+    }
+
+    int sortedIndex = 0;
+    for (int i = 0; i < length; i++) {
+        while (countingArray[sortedIndex] == 0) {
+            sortedIndex++;
+        }
+
+        array[i] = sortedIndex;
+        countingArray[sortedIndex]--;
+    }
+
+    delete[] countingArray;
+}
+```

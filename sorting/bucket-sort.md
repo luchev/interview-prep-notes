@@ -15,36 +15,31 @@
 | Parallel                       | Yes                                   |
 | External                       | Yes                                   |
 
-**Key points**
+### **Implementation**
 
-1. It’s a distribution sort, not a comparison sort.
-2. Very situational sort.
-3. The bellow code is a sample implementation for floats between 0 and 1.
-
-**Code**
-
+```python
+# This implementation works for floats in the range [0;1]
+def bucketSort(arr):
+  buckets = []
+  
+  for i in range(len(arr)):
+    buckets.append([])
+  
+  for x in arr:
+    bucketIndex = int(10 * x)
+    buckets[bucketIndex].append(x)
+  
+  for i in range(len(buckets)):
+    buckets[i] = sorted(buckets[i])
+  
+  k = 0
+  for bucket in buckets:
+    for x in bucket:
+      arr[k] = x
+      k += 1
 ```
-#include <iostream>
-#include <vector>
-#include <algorithm>
-void bucketSort(double *array, int length) {
-    std::vector<double> buckets[length];
 
-    for(int i = 0; i < length; i++) {
-        buckets[int(length * array[i])].push_back(array[i]);
-    }
+### **Key points**
 
-    for(int i = 0; i < length; i++) {
-        sort(buckets[i].begin(), buckets[i].end());
-    }
-
-    int index = 0;
-    for(int i = 0; i < length; i++) {
-        while(!buckets[i].empty()) {
-            array[index] = buckets[i][0];
-            index++;
-            buckets[i].erase(buckets[i].begin());
-        }
-    }
-}
-```
+1. It’s a distribution sort, not a comparison sort
+2. Very a situational sort
