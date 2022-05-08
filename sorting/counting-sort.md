@@ -7,7 +7,13 @@
 | Time complexity (Worst case) | $$\mathcal{O}(n + k)$$         |
 | Time complexity (Best case)  | $$\mathcal{O}(n)$$             |
 | Space complexity             | $$\mathcal{O}(k)$$             |
-|                              |                                |
+| Adaptive                     | No                             |
+| Stable                       | Yes                            |
+| Local                        | No                             |
+| Online                       | No                             |
+| In-place                     | No                             |
+| Parallel                     | Yes                            |
+| External                     | Yes                            |
 
 **Key points**
 
