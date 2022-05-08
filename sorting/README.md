@@ -40,7 +40,7 @@ Indicates if an algorithm needs all the items from the input to start sorting. I
 
 ### **External**
 
-Allows sorting data that cannot fit into memory. Such algorithms are designed to sort massive amounts of data (Gigabytes, Terabytes, etc.)
+Allows sorting data that cannot fit into memory. Such algorithms are designed to sort massive amounts of data (Gigabytes, Terabytes, etc.) All algorithms can be used to sort data that cannot fit into memory, but this property indicates if the algorithm is optimized for operations with files.
 
 ### **Parallel**
 
@@ -53,15 +53,3 @@ The number of comparisons evaluates how many times we need to compare 2 differen
 ### **Number of swaps**
 
 The number of swaps evaluates how many times we need to swap 2 different elements. This matters when the elements we're sorting are huge in size (tens or hundreds of MBs). While this does not affect the complexity analysis, it can affect the actual runtime of an algorithm.
-
-## Helper code
-
-Most sorting algorithms use a swap function, which can be defined as:
-
-```python
-# swap the values of two variables
-def swap(a, b):
-    tmp = a
-    a = b
-    b = tmp
-```

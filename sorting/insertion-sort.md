@@ -1,17 +1,20 @@
 # Insertion sort
 
-#### Insertion sort
+### Properties
 
 | Insertion sort        | n = input size       |
 | --------------------- | -------------------- |
 | Time complexity       | $$\mathcal{O}(n^2)$$ |
 | Space complexity      | $$\mathcal{O}(1)$$   |
-| Adaptive              | Yes                  |
-| Stable                | Yes                  |
 | Number of comparisons | $$\mathcal{O}(n^2)$$ |
 | Number of swaps       | $$\mathcal{O}(n^2)$$ |
+| Adaptive              | Yes                  |
+| Stable                | Yes                  |
+| Local                 | Yes                  |
 | Online                | Yes                  |
-| In place              | Yes                  |
+| In-place              | Yes                  |
+| Parallel              | No                   |
+| External              | No                   |
 
 **Key points**
 

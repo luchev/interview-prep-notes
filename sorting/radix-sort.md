@@ -1,6 +1,6 @@
 # Radix sort
 
-#### Radix sort
+### Properties
 
 | Radix sort                     | n = input size                     |
 | ------------------------------ | ---------------------------------- |

@@ -1,18 +1,20 @@
 # Merge sort
 
-#### Merge sort
+### Properties
 
 | Merge sort            | n = input size            |
 | --------------------- | ------------------------- |
 | Time complexity       | $$\mathcal{O}(n*log(n))$$ |
 | Space complexity      | $$\mathcal{O}(n)$$        |
+| Number of comparisons | $$\mathcal{O}(n*log(n))$$ |
+| Number of swaps       | $$\mathcal{O}(n*log(n))$$ |
 | Adaptive              | No                        |
 | Stable                | Yes                       |
-| Number of comparisons | $$\mathcal{O}(n*log(n))$$ |
-| External              | Yes                       |
-| Parallel              | Yes                       |
+| Local                 | No                        |
 | Online                | No                        |
-| In place              | No                        |
+| In-place              | No                        |
+| Parallel              | Yes                       |
+| External              | Yes                       |
 
 **Key points**
 

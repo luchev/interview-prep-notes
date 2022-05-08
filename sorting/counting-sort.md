@@ -1,12 +1,13 @@
 # Counting sort
 
-#### Counting sort
+### Properties
 
 | Counting sort                | n = input size, k = max number |
 | ---------------------------- | ------------------------------ |
 | Time complexity (Worst case) | $$\mathcal{O}(n + k)$$         |
 | Time complexity (Best case)  | $$\mathcal{O}(n)$$             |
 | Space complexity             | $$\mathcal{O}(k)$$             |
+|                              |                                |
 
 **Key points**
 

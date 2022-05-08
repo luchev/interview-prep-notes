@@ -1,6 +1,6 @@
 # Bucket sort
 
-#### Bucket sort
+### Properties
 
 | Bucket sort                    | n = input size, k = number of buckets |
 | ------------------------------ | ------------------------------------- |

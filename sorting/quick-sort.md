@@ -1,20 +1,21 @@
 # Quick sort
 
-#### Quick sort
+### Properties
 
-| Quick sort                     | n = input size                        |
-| ------------------------------ | ------------------------------------- |
-| Time complexity (Worst case)   | $$\mathcal{O}(n^2)$$                  |
-| Time complexity (Average case) | $$\mathcal{O}(n*log(n))$$             |
-| Space complexity               | $$\mathcal{O}(log(n))$$               |
-| Adaptive                       | No                                    |
-| Anti-Adaptive                  | Yes (the more randomness, the better) |
-| Stable                         | No                                    |
-| Number of comparisons          | $$\mathcal{O}(n*log(n))$$             |
-| Parallel                       | Yes                                   |
-| Online                         | No                                    |
-| In place                       | Yes                                   |
-| Locality                       | Yes                                   |
+| Quick sort                     | n = input size                           |
+| ------------------------------ | ---------------------------------------- |
+| Time complexity (Worst case)   | $$\mathcal{O}(n^2)$$                     |
+| Time complexity (Average case) | $$\mathcal{O}(n*log(n))$$                |
+| Space complexity               | $$\mathcal{O}(log(n))$$                  |
+| Number of comparisons          | $$\mathcal{O}(n*log(n))$$                |
+| Number of swaps                | $$\mathcal{O}(n*log(n))$$                |
+| Adaptive                       | Anti-Adaptive (more randomness = better) |
+| Stable                         | No                                       |
+| Local                          | Yes                                      |
+| Online                         | No                                       |
+| In-place                       | Yes                                      |
+| Parallel                       | Yes                                      |
+| External                       | No                                       |
 
 **Key points**
 
