@@ -73,3 +73,5 @@
 **A\***
 
 ### NP-problems
+
+### Funnel heap
