@@ -68,6 +68,8 @@
 
 **Dijkstra**
 
+Contraction hierarchies
+
 **Bellman-Ford**
 
 **A\***
