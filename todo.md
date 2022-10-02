@@ -10,6 +10,8 @@
 
 BKD
 
+Merkle tree
+
 ### Heap
 
 #### Heap sort
